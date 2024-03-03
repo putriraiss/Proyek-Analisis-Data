@@ -6,7 +6,7 @@ import streamlit as st
 from babel.numbers import format_currency
 sns.set(style='dark')
 
-main_df = pd.read_csv("main_data.csv")
+df = pd.read_csv("dashboard\main_data.csv")
  
 with st.sidebar:
     # Menambahkan logo perusahaan
@@ -68,7 +68,7 @@ st.markdown(
     ## Presentase Penggunaan Layanan Bike Sharing Berdasarkan Kondisi Cuaca
     """
 )
-weather_sum = main_df.groupby('weathersit').sum().reset_index()
+weather_sum = df.groupby('weathersit').sum().reset_index()
 weather_sum.index = ['Berawan', 'Cerah', 'Salju dan hujan ringan']
 
 total_rentals = weather_sum['cnt'].sum()
@@ -129,7 +129,7 @@ st.markdown(
     ## Presentase Penggunaan Layanan Bike Sharing Berdasarkan Musim (4 Musim)
     """
 )
-total_users_per_season = main_df.groupby('season')['cnt'].sum().reset_index()
+total_users_per_season = df.groupby('season')['cnt'].sum().reset_index()
 total_rentals = total_users_per_season['cnt'].sum()
 proportions = total_users_per_season['cnt'] / total_rentals
 
