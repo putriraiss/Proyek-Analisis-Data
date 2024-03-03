@@ -5,10 +5,8 @@ import plotly.express as px
 import streamlit as st
 from babel.numbers import format_currency
 sns.set(style='dark')
-import os
-os.chdir("dashboard")
 
-df = pd.read_csv("dashboard\main_data.csv")
+df = pd.read_csv("main_data.csv")
  
 with st.sidebar:
     # Menambahkan logo perusahaan
