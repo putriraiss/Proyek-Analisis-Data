@@ -6,8 +6,9 @@ import streamlit as st
 from babel.numbers import format_currency
 sns.set(style='dark')
 
-df = pd.read_csv("main_data.csv")
- 
+# load data from github
+df = pd.read_csv("https://raw.githubusercontent.com/putriraiss/Proyek-Analisis-Data/main/dashboard/main_data.csv")
+
 with st.sidebar:
     # Menambahkan logo perusahaan
     st.image("https://raw.githubusercontent.com/putriraiss/Proyek-Analisis-Data/main/logo.png")
