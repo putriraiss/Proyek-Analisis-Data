@@ -1,8 +1,12 @@
-# Bike Sharing 
-## Setup Environmet
-`conda create --name main-ds python=3.9`
-`conda activate main-ds`
-`pip install streamlit babel`
+# Bike Sharing Project
+## Setup Environment
 
-## Run Steamlit Apk
-`streamlit run dashboard.py`
+```bash
+conda create --name main-ds python=3.9
+conda activate main-ds
+pip install streamlit babel
+```
+## Run Strealit
+```bash
+streamlit run dashboard.py
+```
